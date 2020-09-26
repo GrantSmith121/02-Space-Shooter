@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Die.gd" type="Script" id=1]
+
+[node name="Die" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1021.0
+margin_bottom = 271.0
+text = "Your ship has fallen"
+align = 1
+valign = 1
+
+[node name="Play" type="Button" parent="."]
+margin_left = 408.145
+margin_top = 267.462
+margin_right = 619.145
+margin_bottom = 340.462
+text = "Play Again?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 408.145
+margin_top = 360.0
+margin_right = 619.145
+margin_bottom = 433.0
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
